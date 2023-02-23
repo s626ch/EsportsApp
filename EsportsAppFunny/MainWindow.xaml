@@ -60,7 +60,7 @@
             <ComboBoxItem>Super Smash Bros.</ComboBoxItem>
             <ComboBoxItem>Overwatch</ComboBoxItem>
         </ComboBox>
-        <Button Content="Submit" Margin="10,339,10,0" Grid.Row="1" Grid.Column="0" x:Name="SubmitStudentInfo" VerticalAlignment="Top" Width="Auto" Height="20"/>
+        <Button Content="Submit" Margin="10,339,10,0" Grid.Row="1" Grid.Column="0" x:Name="SubmitStudentInfo" VerticalAlignment="Top" Width="Auto" Height="20" Click="SubmitStudentInfo_Click"/>
         <!-- view student -->
         <Label Content="Player ID (numbers only)" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Grid.Row="1" Width="Auto"/>
         <Grid Grid.Column="1" Grid.Row="1" Width="Auto" Height="20" Margin="10,65,10,0" VerticalAlignment="Top">
@@ -68,8 +68,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" HorizontalAlignment="Stretch" TextWrapping="Wrap" Width="Auto"/>
-            <Button Grid.Column="1" HorizontalAlignment="Stretch" Content="Lookup" VerticalAlignment="Top" Width="Auto" Height="20" x:Name="StudentLookup"/>
+            <TextBox Grid.Column="0" HorizontalAlignment="Stretch" TextWrapping="Wrap" Width="Auto" x:Name="LookupID"/>
+            <Button Grid.Column="1" HorizontalAlignment="Stretch" Content="Lookup" VerticalAlignment="Top" Width="Auto" Height="20" x:Name="StudentLookup" Click="StudentLookup_Click"/>
         </Grid>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="10,90,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="67" Height="26"/>
         <TextBox Margin="10,116,10,0" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" x:Name="FirstNameLookup" VerticalAlignment="Top" Width="Auto" Height="18" IsReadOnly="True"/>
@@ -80,7 +80,7 @@
         <Label Content="Discord ID" HorizontalAlignment="Left" Margin="10,237,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="65" Height="26"/>
         <TextBox Margin="10,263,10,0" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" x:Name="DiscordIDLookup" PreviewTextInput="DiscordValidationTextBox" VerticalAlignment="Top" Width="Auto" Height="18" IsReadOnly="True"/>
         <Label Content="eSports Game" HorizontalAlignment="Left" Margin="10,286,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="84" Height="26"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,312,10,0" x:Name="GameLookup" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,312,10,0" x:Name="GameLookup" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" IsReadOnly="True"/>
 
     </Grid>
 </Window>
